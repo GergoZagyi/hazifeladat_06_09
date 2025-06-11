@@ -41,18 +41,18 @@ function fifteenCheck(a, b) {
 
 //5 Előjelek egyeznek-e check
 
-function előjelCheck(a, b){
+function elojelCheck(a, b){
     if( ( a >= 0 && b >= 0 ) || ( a <= 0 && b <= 0 ) ){
         console.log('Ez a két szám azonos előjellel rendelkezik');
     } else{console.log('Ez a két szám nem azonos előjellel rendelkezik')}
 }
 
-//előjelCheck(5, 0)
+//elojelCheck(5, 0)
 
 
 //6 Szám többszöröse-e egy másiknak
 
-function többszörösCheck(a){
+function tobbszorosCheck(a){
     let resultFound = false;
     for(let i = 2; i < a; i++){
         if (a % i === 0){
@@ -65,20 +65,20 @@ function többszörösCheck(a){
         console.log("Nem találtam osztót");
     }
 }
-//többszörösCheck(12)
+//tobbszorosCheck(12)
 
 
 //7 legnagyobb szám kiválasztása 
 
 
-function legnagyobbSzám(a, b, c){
+function legnagyobbSzam(a, b, c){
     if(a > b && a > b){
         console.log(`A legnagyobb szám ${a}`);
     } else if (b > a && b > c){
         console.log(`A legnagyobb szám ${b}`);
     } else{console.log(`A legnagyobb szám ${c}`)}
 }
-//legnagyobbSzám(1, 1, 6)
+//legnagyobbSzam(1, 1, 6)
 
 
 //8 Három szám, utolsó számjegy egyezik-e
@@ -113,7 +113,7 @@ function intervallumCheck(a){
 
 //10 Szögtipus check
 
-function szögtipusCheck(a) {
+function szogtipusCheck(a) {
     switch(true){
         case (a >= 0 && a < 90):
             console.log('Hegyesszög');
@@ -131,12 +131,12 @@ function szögtipusCheck(a) {
             console.log('Nem szög')
     }
 }
-//szögtipusCheck(280);
+//szogtipusCheck(280);
 
 
 //11 Pontszám check
 
-function pontszámCheck(a){
+function pontszamCheck(a){
     switch (true){
         case(a >= 50 && a < 75):
             console.log('Elégséges');
@@ -159,7 +159,7 @@ function pontszámCheck(a){
 
 //12 két szám hasonló-e check ahol c az osztó
 
-function hasonlóCheck(a, b, c){
+function hasonloCheck(a, b, c){
     if((a % c === 0 && b % c === 0) || (a % c != 0 && b % c != 0)){
         console.log('A két szám hasonló')
     } else{console.log('A két szám nem hasonló')}
