@@ -7,16 +7,18 @@ function getTerület (a, b) {
 }
 //getTerület(4, 6)
 
-
+const terulet = (a, b) => a * b;
+ 
 //2 Kör Kerület számolás
 
 function getKörKerület(r){
     let p = Math.PI;
     console.log(`A kör területe: ${r * 2 * p}`);
 }
-//getKörKerület(4)
 
-
+const kerulet = (r) =>Math.floor( r * 2 * (Math.PI));
+//console.log(kerulet(5))
+ 
 //3 Páros, Páratlan check
 
 function checkPáros(a, b){
@@ -25,9 +27,9 @@ function checkPáros(a, b){
         console.log('A számpár összege páros!');
     } else{console.log('A számpár összege nem páros!')}
 }
-//checkPáros(2, 4)
-//checkPáros(5, 6)
 
+const paros = (a, b) => (a + b) % 2 == 0;
+//console.log(paros(2, 4))
 
 //4 15 check
 
@@ -36,7 +38,9 @@ function fifteenCheck(a, b) {
         console.log('Ez az eset igaz eredményt ad a tizenötös ellenőrzésre!');
     } else{console.log('Ez az eset hamis eredményt adna a tizenötös ellenőrzésre!')}
 }
-//fifteenCheck(27, 15)
+
+const tizenot = (a, b) => a == 15 || b == 15 || Math.abs(a - b) == 15 || a + b == 15;
+//console.log(tizenot(12, 27))
 
 
 //5 Előjelek egyeznek-e check
@@ -47,26 +51,26 @@ function elojelCheck(a, b){
     } else{console.log('Ez a két szám nem azonos előjellel rendelkezik')}
 }
 
-//elojelCheck(5, 0)
-
+const elojel = (a, b) => a * b >= 0;
+//console.log(elojel(-5, -16))
 
 //6 Szám többszöröse-e egy másiknak
 
 function tobbszorosCheck(a){
-    let resultFound = false;
     for(let i = 2; i < a; i++){
         if (a % i === 0){
             console.log(`Az ${a} szám többszöröse a következő számnak: ${i}`);
-            resultFound = true;
-            break;
+            return
         }
     }
     if(!resultFound){
         console.log("Nem találtam osztót");
     }
 }
-//tobbszorosCheck(12)
+tobbszorosCheck(57142)
+const tobbszoros = (a, b) => b % a == 0;
 
+//console.log(tobbszoros(4, 6))
 
 //7 legnagyobb szám kiválasztása 
 
@@ -78,7 +82,11 @@ function legnagyobbSzam(a, b, c){
         console.log(`A legnagyobb szám ${b}`);
     } else{console.log(`A legnagyobb szám ${c}`)}
 }
-//legnagyobbSzam(1, 1, 6)
+const legnagyobb = (a, b, c) => {
+    let myArray = [a, b ,c];
+    myArray.sort((a, b) => a - b);
+    return myArray[2]
+}
 
 
 //8 Három szám, utolsó számjegy egyezik-e
@@ -108,7 +116,10 @@ function intervallumCheck(a){
     } else{console.log('Ez a szám az intervallumon kivülre esik')};
 }
 
-//intervallumCheck(5)
+
+
+const intervallum = (a, b, c) => a >= b && a <= c;
+
 
 
 //10 Szögtipus check
